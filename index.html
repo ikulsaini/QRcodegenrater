@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="img">
+          <img src="">
+        </div>
+        <div class="form">
+          <input type="text" spellcheck="false" placeholder="Enter text or url" autocomplete="off">
+          <button>Generate QR Code</button>
+        </div>
+      </div>
+    <script>
+
+const image = document.querySelector("img"),
+  input = document.querySelector("input"),
+  button = document.querySelector("button"),
+  api = `https://api.qrserver.com/v1/`,
+  api2 = `create-qr-code/?size=150x150&data=`;
+
+button.addEventListener("click", () => {
+  image.src = `${api}${api2}${input.value}`;
+});
+
+    </script>
+</body>
+
+</html>
